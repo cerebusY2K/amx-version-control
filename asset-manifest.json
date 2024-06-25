@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/amx-version-control/static/css/main.6b65d57a.css",
-    "main.js": "/amx-version-control/static/js/main.0a56992a.js",
+    "main.css": "/amx-version-control/static/css/main.ad8f3a44.css",
+    "main.js": "/amx-version-control/static/js/main.694a8e0e.js",
     "static/js/453.8ef5df90.chunk.js": "/amx-version-control/static/js/453.8ef5df90.chunk.js",
     "index.html": "/amx-version-control/index.html",
-    "main.6b65d57a.css.map": "/amx-version-control/static/css/main.6b65d57a.css.map",
-    "main.0a56992a.js.map": "/amx-version-control/static/js/main.0a56992a.js.map",
+    "main.ad8f3a44.css.map": "/amx-version-control/static/css/main.ad8f3a44.css.map",
+    "main.694a8e0e.js.map": "/amx-version-control/static/js/main.694a8e0e.js.map",
     "453.8ef5df90.chunk.js.map": "/amx-version-control/static/js/453.8ef5df90.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b65d57a.css",
-    "static/js/main.0a56992a.js"
+    "static/css/main.ad8f3a44.css",
+    "static/js/main.694a8e0e.js"
   ]
 }
