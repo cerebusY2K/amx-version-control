@@ -8,7 +8,7 @@ function App() {
     const [message, setMessage] = useState('');
 
     useEffect(() => {
-        axios.get('https://amx-version-control-backend.onrender.com/api/version')
+        axios.get('http://localhost:4000/api/version')
             .then(response => {
                 setAppsData(response.data.apps);
                 setLoading(false);
@@ -30,7 +30,7 @@ function App() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://amx-version-control-backend.onrender.com/api/version', { apps: appsData })
+        axios.post('http://localhost:4000/api/version', { apps: appsData })
             .then(response => {
                 setMessage(response.data);
             })
@@ -57,6 +57,15 @@ function App() {
                                 type="text"
                                 name="latest_version"
                                 value={app.latest_version}
+                                onChange={e => handleChange(index, e)}
+                            />
+                        </div>
+                        <div>
+                            <label>Version Code:</label>
+                            <input
+                                type="number"
+                                name="version_code"
+                                value={app.version_code}
                                 onChange={e => handleChange(index, e)}
                             />
                         </div>

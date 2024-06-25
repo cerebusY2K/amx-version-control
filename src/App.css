@@ -34,7 +34,7 @@ label {
   margin-right: 10px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="number"] {
   padding: 5px;
   font-size: 1em;
 }
