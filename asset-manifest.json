@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/version-ui/static/css/main.15f00a9b.css",
-    "main.js": "/version-ui/static/js/main.c9d0a2eb.js",
-    "static/js/453.8ef5df90.chunk.js": "/version-ui/static/js/453.8ef5df90.chunk.js",
-    "index.html": "/version-ui/index.html",
-    "main.15f00a9b.css.map": "/version-ui/static/css/main.15f00a9b.css.map",
-    "main.c9d0a2eb.js.map": "/version-ui/static/js/main.c9d0a2eb.js.map",
-    "453.8ef5df90.chunk.js.map": "/version-ui/static/js/453.8ef5df90.chunk.js.map"
+    "main.css": "/amx-version-control/static/css/main.15f00a9b.css",
+    "main.js": "/amx-version-control/static/js/main.c2f01dbb.js",
+    "static/js/453.8ef5df90.chunk.js": "/amx-version-control/static/js/453.8ef5df90.chunk.js",
+    "index.html": "/amx-version-control/index.html",
+    "main.15f00a9b.css.map": "/amx-version-control/static/css/main.15f00a9b.css.map",
+    "main.c2f01dbb.js.map": "/amx-version-control/static/js/main.c2f01dbb.js.map",
+    "453.8ef5df90.chunk.js.map": "/amx-version-control/static/js/453.8ef5df90.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15f00a9b.css",
-    "static/js/main.c9d0a2eb.js"
+    "static/js/main.c2f01dbb.js"
   ]
 }
