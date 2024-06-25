@@ -8,7 +8,7 @@ function App() {
     const [message, setMessage] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:4000/api/version')
+        axios.get('https://amx-version-control-backend.onrender.com/api/version')
             .then(response => {
                 setAppsData(response.data.apps);
                 setLoading(false);
@@ -30,7 +30,7 @@ function App() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:4000/api/version', { apps: appsData })
+        axios.post('https://amx-version-control-backend.onrender.com/api/version', { apps: appsData })
             .then(response => {
                 setMessage(response.data);
             })
@@ -48,47 +48,49 @@ function App() {
         <div className="App">
             <h1>Version Management</h1>
             <form onSubmit={handleSubmit}>
-                {appsData.map((app, index) => (
-                    <div key={index} className="app-section">
-                        <h2>{app.name}</h2>
-                        <div>
-                            <label>Latest Version:</label>
-                            <input
-                                type="text"
-                                name="latest_version"
-                                value={app.latest_version}
-                                onChange={e => handleChange(index, e)}
-                            />
+                <div className="grid-container">
+                    {appsData.map((app, index) => (
+                        <div key={index} className="grid-item">
+                            <h2>{app.name}</h2>
+                            <div>
+                                <label>Latest Version:</label>
+                                <input
+                                    type="text"
+                                    name="latest_version"
+                                    value={app.latest_version}
+                                    onChange={e => handleChange(index, e)}
+                                />
+                            </div>
+                            <div>
+                                <label>Version Code:</label>
+                                <input
+                                    type="number"
+                                    name="version_code"
+                                    value={app.version_code}
+                                    onChange={e => handleChange(index, e)}
+                                />
+                            </div>
+                            <div>
+                                <label>Force Update:</label>
+                                <input
+                                    type="checkbox"
+                                    name="force_update"
+                                    checked={app.force_update}
+                                    onChange={e => handleChange(index, e)}
+                                />
+                            </div>
+                            <div>
+                                <label>Skippable:</label>
+                                <input
+                                    type="checkbox"
+                                    name="skippable"
+                                    checked={app.skippable}
+                                    onChange={e => handleChange(index, e)}
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <label>Version Code:</label>
-                            <input
-                                type="number"
-                                name="version_code"
-                                value={app.version_code}
-                                onChange={e => handleChange(index, e)}
-                            />
-                        </div>
-                        <div>
-                            <label>Force Update:</label>
-                            <input
-                                type="checkbox"
-                                name="force_update"
-                                checked={app.force_update}
-                                onChange={e => handleChange(index, e)}
-                            />
-                        </div>
-                        <div>
-                            <label>Skippable:</label>
-                            <input
-                                type="checkbox"
-                                name="skippable"
-                                checked={app.skippable}
-                                onChange={e => handleChange(index, e)}
-                            />
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
                 <button type="submit">Update Versions</button>
             </form>
             {message && <p>{message}</p>}
